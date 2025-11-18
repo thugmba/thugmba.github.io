@@ -33,29 +33,7 @@
 </head>
 <body class="bg-white font-display">
 <div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
-    <!-- Header -->
-    <header class="sticky top-0 z-50 flex items-center justify-center whitespace-nowrap border-b border-solid border-gray-200 bg-white/95 backdrop-blur-sm">
-        <div class="flex items-center justify-between px-6 py-3 w-full max-w-7xl">
-            <a href="index.html" class="flex items-center gap-4 text-gray-800 hover:opacity-90 transition-opacity">
-                <h2 class="text-gray-900 text-lg font-bold leading-tight tracking-[-0.015em]">Tunghai University GMBA</h2>
-            </a>
-            <div class="flex flex-1 justify-end gap-8 items-center">
-                <div class="hidden md:flex items-center gap-9">
-                    <a class="text-gray-600 text-sm font-medium leading-normal hover:text-primary transition-colors" href="about.html">About</a>
-                    <a class="text-gray-600 text-sm font-medium leading-normal hover:text-primary transition-colors" href="program.html">Program</a>
-                    <a class="text-gray-600 text-sm font-medium leading-normal hover:text-primary transition-colors" href="admission.html">Admission</a>
-                    <a class="text-gray-600 text-sm font-medium leading-normal hover:text-primary transition-colors" href="news.html">News</a>
-                    <a class="text-gray-600 text-sm font-medium leading-normal hover:text-primary transition-colors" href="contact.html">Contact</a>
-                </div>
-                <a href="application.html" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-primary/90 transition-colors">
-                    <span class="truncate">Apply Now</span>
-                </a>
-                <div class="md:hidden">
-                    <span class="material-symbols-outlined text-gray-800">menu</span>
-                </div>
-            </div>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
     <main class="flex h-full grow flex-col items-center">
         <div class="layout-content-container flex flex-col w-full max-w-7xl px-4 md:px-10 py-10 gap-12">
             <!-- Page Header -->
@@ -112,7 +90,31 @@
                             </div>
                             <div>
                                 <label for="degree" class="block text-sm font-medium text-gray-700 mb-1">Degree Obtained</label>
-                                <input type="text" id="degree" name="degree" class="w-full rounded-md border-gray-300 focus:border-primary focus:ring-primary">
+                                <input type="text" id="degree" name="degree" list="degree-suggestions" placeholder="Start typing or select from suggestions..." class="w-full rounded-md border-gray-300 focus:border-primary focus:ring-primary" autocomplete="off">
+                                <datalist id="degree-suggestions">
+                                    <option value="Bachelor of Arts (BA)">
+                                    <option value="Bachelor of Science (BS)">
+                                    <option value="Bachelor of Business Administration (BBA)">
+                                    <option value="Bachelor of Commerce (BCom)">
+                                    <option value="Bachelor of Engineering (BEng)">
+                                    <option value="Bachelor of Technology (BTech)">
+                                    <option value="Bachelor of Economics">
+                                    <option value="Bachelor of Finance">
+                                    <option value="Bachelor of Accounting">
+                                    <option value="Master of Arts (MA)">
+                                    <option value="Master of Science (MS)">
+                                    <option value="Master of Business Administration (MBA)">
+                                    <option value="Master of Commerce (MCom)">
+                                    <option value="Master of Engineering (MEng)">
+                                    <option value="Master of Technology (MTech)">
+                                    <option value="Master of Economics">
+                                    <option value="Master of Finance">
+                                    <option value="Master of Accounting">
+                                    <option value="Doctor of Philosophy (PhD)">
+                                    <option value="Doctor of Business Administration (DBA)">
+                                    <option value="Juris Doctor (JD)">
+                                    <option value="Doctor of Medicine (MD)">
+                                </datalist>
                             </div>
                             <div>
                                 <label for="major" class="block text-sm font-medium text-gray-700 mb-1">Major/Field of Study</label>
@@ -124,20 +126,25 @@
                             </div>
                             <div>
                                 <label for="english-exam" class="block text-sm font-medium text-gray-700 mb-1">English Proficiency Exam</label>
-                                <select id="english-exam" name="english-exam" class="w-full rounded-md border-gray-300 focus:border-primary focus:ring-primary">
-                                    <option value="">Select an exam</option>
-                                    <option value="TOEFL">TOEFL</option>
-                                    <option value="IELTS">IELTS</option>
-                                    <option value="TOEIC">TOEIC</option>
-                                    <option value="Cambridge">Cambridge English</option>
-                                    <option value="PTE">PTE Academic</option>
-                                    <option value="Duolingo">Duolingo English Test</option>
-                                    <option value="Etc">Etc</option>
-                                </select>
-                            </div>
-                            <div id="other-exam-field" class="hidden">
-                                <label for="other-exam-name" class="block text-sm font-medium text-gray-700 mb-1">Exam Name</label>
-                                <input type="text" id="other-exam-name" name="other-exam-name" placeholder="Please specify exam name" class="w-full rounded-md border-gray-300 focus:border-primary focus:ring-primary">
+                                <input type="text" id="english-exam" name="english-exam" list="exam-suggestions" placeholder="Start typing or select from suggestions..." class="w-full rounded-md border-gray-300 focus:border-primary focus:ring-primary" autocomplete="off">
+                                <datalist id="exam-suggestions">
+                                    <option value="TOEFL">
+                                    <option value="IELTS">
+                                    <option value="TOEIC">
+                                    <option value="Cambridge English">
+                                    <option value="PTE Academic">
+                                    <option value="Duolingo English Test">
+                                    <option value="TOEFL iBT">
+                                    <option value="TOEFL ITP">
+                                    <option value="IELTS Academic">
+                                    <option value="IELTS General Training">
+                                    <option value="Cambridge FCE">
+                                    <option value="Cambridge CAE">
+                                    <option value="Cambridge CPE">
+                                    <option value="Oxford English Test">
+                                    <option value="iTEP">
+                                    <option value="Pearson Test of English">
+                                </datalist>
                             </div>
                             <div>
                                 <label for="english-score" class="block text-sm font-medium text-gray-700 mb-1">English Score</label>
@@ -146,9 +153,20 @@
                         </div>
                     </div>
 
+                    <!-- Total Work Experience -->
+                    <div class="bg-gray-50 rounded-xl border border-gray-200 p-8">
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">3. Total Work Experience</h2>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="total-work-years" class="block text-sm font-medium text-gray-700 mb-1">Total Years of Work Experience</label>
+                                <input type="number" id="total-work-years" name="total-work-years" min="0" step="0.5" placeholder="e.g., 3.5" class="w-full rounded-md border-gray-300 focus:border-primary focus:ring-primary">
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Work Experience -->
                     <div class="bg-gray-50 rounded-xl border border-gray-200 p-8">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-6">3. Latest Professional Work Experience</h2>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">4. Latest Professional Work Experience</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div>
                                 <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company Name</label>
@@ -167,7 +185,7 @@
 
                     <!-- Essays -->
                     <div class="bg-gray-50 rounded-xl border border-gray-200 p-8">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-6">4. Application Essays</h2>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">5. Application Essays</h2>
                         <div class="space-y-6">
                             <div>
                                 <label for="essay1" class="block text-lg font-semibold text-gray-800 mb-2">Essay 1: Career Goals</label>
@@ -184,7 +202,7 @@
 
                     <!-- Document Uploads -->
                     <div class="bg-gray-50 rounded-xl border border-gray-200 p-8">
-                        <h2 class="text-2xl font-bold text-gray-900 mb-6">5. Required Documents</h2>
+                        <h2 class="text-2xl font-bold text-gray-900 mb-6">6. Required Documents</h2>
                         <div class="space-y-4">
                             <div>
                                 <label for="resume-upload" class="block text-sm font-medium text-gray-700 mb-1">Resume/CV</label>
@@ -202,6 +220,10 @@
                                 <label for="recommendation2-upload" class="block text-sm font-medium text-gray-700 mb-1">Letter of Recommendation 2</label>
                                 <input type="file" id="recommendation2-upload" name="recommendation2-upload" class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
                             </div>
+                            <div>
+                                <label for="financial-statement-upload" class="block text-sm font-medium text-gray-700 mb-1">Financial Statement</label>
+                                <input type="file" id="financial-statement-upload" name="financial-statement-upload" class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-primary/10 file:text-primary hover:file:bg-primary/20">
+                            </div>
                         </div>
                     </div>
 
@@ -217,18 +239,7 @@
     </main>
     <div id="footer-placeholder"></div>
 </div>
+<script src="header.js"></script>
 <script src="footer.js"></script>
-<script>
-    // Show/hide other exam name field based on English exam selection
-    document.getElementById('english-exam').addEventListener('change', function() {
-        const otherExamField = document.getElementById('other-exam-field');
-        if (this.value === 'Etc') {
-            otherExamField.classList.remove('hidden');
-        } else {
-            otherExamField.classList.add('hidden');
-            document.getElementById('other-exam-name').value = ''; // Clear the field when hidden
-        }
-    });
-</script>
 </body>
 </html>
